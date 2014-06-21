@@ -5,7 +5,7 @@ restaurants = [
     address: '1234 Leather St',
     city: 'Boston',
     state: 'MA',
-    zip_code: 02114,
+    zip_code: '02114',
     description: 'The best!',
     category: 'Japanese'
   },
@@ -15,7 +15,7 @@ restaurants = [
     address: '69 Barf St',
     city: 'Cambridge',
     state: 'MA',
-    zip_code: 02142,
+    zip_code: '02142',
     description: 'Crap!',
     category: 'Grease'
   },
@@ -25,7 +25,7 @@ restaurants = [
     address: '44 Four Ave',
     city: 'Topica',
     state: 'KS',
-    zip_code: 00001,
+    zip_code: '00001',
     description: 'As big as your head',
     category: 'Pastry'
   },
@@ -35,7 +35,7 @@ restaurants = [
     address: '1001 Comm Ave',
     city: 'Boston',
     state: 'MA',
-    zip_code: 02111,
+    zip_code: '02111',
     description: 'Great food and drink. Known for craft cocktails',
     category: 'American Bistro'
   },
@@ -45,9 +45,69 @@ restaurants = [
     address: '165 Cambridge St.',
     city: 'Cambridge',
     state: 'MA',
-    zip_code: 02114,
+    zip_code: '02114',
     description: 'Good food and good people',
     category: 'American bar'
+  },
+
+  {
+    name: "Moe's",
+    address: '165 Pleasant St.',
+    city: 'Springfield',
+    state: 'LM',
+    zip_code: '02999',
+    description: "Drink at Moe's - Wake up without a kidney!!!",
+    category: 'Dive-bar'
+  },
+
+  {
+    name: 'Restaurant 5',
+    address: '555 Cambridge St.',
+    city: 'Cambridge',
+    state: 'MA',
+    zip_code: '02116',
+    description: "We're OK!",
+    category: 'French'
+  },
+
+  {
+    name: 'Rocket Science',
+    address: '1 Easy St.',
+    city: 'Boston',
+    state: 'MA',
+    zip_code: '02114',
+    description: 'Artisan ice cream, locally sourced.',
+    category: 'Ice Cream'
+  },
+
+  {
+    name: 'The Double Skunk Saloon',
+    address: '165 Cambridge St.',
+    city: 'Cambridge',
+    state: 'MA',
+    zip_code: '02114',
+    description: 'The worlds first Cribbage bar',
+    category: 'American bar'
+  },
+
+  {
+    name: 'Another Restaurant',
+    address: '12345 Pitsville St.',
+    city: 'Hell',
+    state: 'SD',
+    zip_code: '23523',
+    description: 'A Description about the description',
+    category: 'American bar'
+  },
+
+  {
+    name: 'Yet Another Bar',
+    address: '12345 Bourbon St.',
+    city: 'New Orleans',
+    state: 'LA',
+    zip_code: '47263',
+    description: 'That thing you are trying to brush off of your forehead... that would be the floor',
+    category: 'Dive-bar'
   }
 ]
 
