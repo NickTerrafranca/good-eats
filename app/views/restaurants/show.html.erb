@@ -1,0 +1,11 @@
+<h2><%= @restaurant.name %></h2>
+<div id="restaurant_details">
+  <ul>
+    <li>Address: <%= "#{@restaurant.address} #{@restaurant.city} #{@restaurant.state} #{@restaurant.zip_code}" %></li>
+    <li>Description: <%= @restaurant.description%></li>
+    <li>Cuisine/Category: <%=@restaurant.category%></li>
+  </ul>
+</div>
+<div>
+<%= link_to "Back", restaurants_path%>
+</div>
