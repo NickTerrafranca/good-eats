@@ -3,7 +3,7 @@
   <ul>
     <% @restaurants.each do |r| %>
       <li>
-        Name: <%=r.name%>
+        Name: <%= link_to r.name, restaurant_path(r) %>
       </li>
       <li>
       Location: <%= "#{r.address}, #{r.city} #{r.state} #{r.zip_code}"%>
@@ -18,7 +18,6 @@
     <%end%>
   </ul>
 </div>
-
 
 
 

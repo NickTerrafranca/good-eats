@@ -4,6 +4,8 @@ class RestaurantsController < ApplicationController
     @restaurants  = Restaurant.order('updated_at ASC')
   end
 
-
+  def show
+    @restaurant = Restaurant.find(params[:id])
+  end
 
 end
