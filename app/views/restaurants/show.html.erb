@@ -6,6 +6,9 @@
     <li>Cuisine/Category: <%=@restaurant.category%></li>
   </ul>
 </div>
-<div>
+<div class="back">
 <%= link_to "Back", restaurants_path%>
+</div>
+<div>
+  <%= link_to "Review this Restaurant", new_restaurant_review_path(params[:id]) %>
 </div>
