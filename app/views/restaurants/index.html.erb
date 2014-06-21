@@ -1,0 +1,24 @@
+<h1>Restaurants</h1>
+<div id="restaurant_list">
+  <ul>
+    <% @restaurants.each do |r| %>
+      <li>
+        Name: <%=r.name%>
+      </li>
+      <li>
+      Location: <%= "#{r.address}, #{r.city} #{r.state} #{r.zip_code}"%>
+      </li>
+      <li>
+      Description: <%= r.description%>
+      </li>
+      <li>
+      Cuisine/Category: <%= r.category %>
+      </li>
+      <br>
+    <%end%>
+  </ul>
+</div>
+
+
+
+
