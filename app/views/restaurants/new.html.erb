@@ -1,8 +1,9 @@
 <h1>Add You're Restaurant</h1>
+<%= link_to "<- Back", restaurants_path%>
 
 <%= form_for @restaurant do |f| %>
 
-  <%=f.label :name%><br>
+  <br><%=f.label :name%><br>
   <%=f.text_field :name%><br>
 
   <%=f.label :address%><br>
@@ -22,6 +23,5 @@
 
   <%=f.label :category%><br>
   <%=f.text_field :category%><br>
-
   <br><%= f.submit 'Add!' %>
 <%end%>

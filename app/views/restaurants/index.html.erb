@@ -1,5 +1,5 @@
 <h1>Restaurants</h1>
-<%= link_to "Add Your Restaurant", new_restaurant_path%>
+<%= link_to "Add Your Restaurant For FREE!", new_restaurant_path%>
 <div id="restaurant_list">
   <ul>
     <% @restaurants.each do |r| %>
@@ -7,13 +7,13 @@
         Name: <%= link_to r.name, restaurant_path(r) %>
       </li>
       <li>
-      Location: <%= "#{r.address}, #{r.city} #{r.state} #{r.zip_code}"%>
+        Location: <%= "#{r.address}, #{r.city} #{r.state} #{r.zip_code}"%>
       </li>
       <li>
-      Description: <%= r.description%>
+        Description: <%= r.description%>
       </li>
       <li>
-      Cuisine/Category: <%= r.category %>
+        Cuisine/Category: <%= r.category %>
       </li>
       <br>
     <%end%>

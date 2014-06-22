@@ -1,4 +1,8 @@
 <h2><%= @restaurant.name %></h2>
+<div class="back">
+  <%= link_to "<- Back", restaurants_path%>
+</div>
+
 <div id="restaurant_details">
   <ul>
     <li>Address: <%= "#{@restaurant.address} #{@restaurant.city} #{@restaurant.state} #{@restaurant.zip_code}" %></li>
@@ -6,9 +10,16 @@
     <li>Cuisine/Category: <%=@restaurant.category%></li>
   </ul>
 </div>
-<div class="back">
-<%= link_to "Back", restaurants_path%>
-</div>
 <div>
-  <%= link_to "Review this Restaurant", new_restaurant_review_path(params[:id]) %>
+  <%if @restaurant.reviews.any? %>
+    <p><%= link_to "Review this Restaurant", new_restaurant_review_path(params[:id]) %></p>
+    <% @restaurant.reviews.order('updated_at DESC').each do |r|%>
+      <p>
+        User Rating: <%=r.rating%><br>
+        User Comments: <%=r.body%>
+      </p>
+  <%end%>
+  <%else%>
+      <p>Be the First to <%= link_to "Review this Restaurant", new_restaurant_review_path(params[:id]) %>!</p>
+  <%end%>
 </div>

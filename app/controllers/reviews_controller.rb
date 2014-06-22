@@ -8,7 +8,6 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @restaurant = Restaurant.find(params[:restaurant_id])
-    @review.rating.to_i
     @review.restaurant_id = @restaurant.id
     if @review.save
       redirect_to @restaurant
