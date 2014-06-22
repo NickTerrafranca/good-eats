@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to @restaurant
     else
-      flash.now[:notice] = "Something went wrong, you submission could not be saved."
+      flash.now[:notice] = 'Something went wrong, you submission could not be saved.'
       render :new
     end
   end
@@ -20,5 +20,4 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:rating, :body)
   end
-
 end

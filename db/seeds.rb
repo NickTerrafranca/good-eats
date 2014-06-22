@@ -111,7 +111,6 @@ restaurants = [
   }
 ]
 
-
 restaurants.each do |restaurant_hash|
   restaurant_attr = {
     name: restaurant_hash[:name],

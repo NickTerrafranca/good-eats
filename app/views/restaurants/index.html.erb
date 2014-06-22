@@ -20,5 +20,10 @@
   </ul>
 </div>
 
-
+<div>
+  <% if @page >= 1 %>
+    <a href="/?page=<%=(@page - 1) %>"><- Previous page</a>
+  <%end%>
+  <a href="/?page=<%=(@page + 1) %>">Next page -></a>
+</div>
 

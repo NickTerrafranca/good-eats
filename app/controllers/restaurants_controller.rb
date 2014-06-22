@@ -1,7 +1,8 @@
 class RestaurantsController < ApplicationController
 
   def index
-    @restaurants  = Restaurant.order('updated_at DESC')
+    @page = params[:page].to_i
+    @restaurants  = Restaurant.order('updated_at DESC').limit(10).offset(10 * @page)
   end
 
   def show
@@ -17,7 +18,7 @@ class RestaurantsController < ApplicationController
     if @restaurant.save
       redirect_to restaurants_path
     else
-      flash.now[:notice] = "Something went wrong, you submission could not be saved."
+      flash.now[:notice] = 'Something went wrong, you submission could not be saved.'
       render :new
     end
   end
@@ -25,6 +26,6 @@ class RestaurantsController < ApplicationController
   private
 
   def restaurant_params
-  params.require(:restaurant).permit(:name, :address, :city, :state, :zip_code, :description, :category)
+    params.require(:restaurant).permit(:name, :address, :city, :state, :zip_code, :description, :category)
   end
 end
