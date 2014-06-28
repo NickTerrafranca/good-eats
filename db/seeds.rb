@@ -125,7 +125,4 @@ restaurants.each do |restaurant_hash|
   restaurant = Restaurant.find_by(restaurant_attr)
   restaurant ||= Restaurant.create!(restaurant_attr)
 
-  if !Restaurant.exists?(restaurant_attr)
-    Restaurant.create!(restaurant_attr)
-  end
 end
