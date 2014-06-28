@@ -1,0 +1,28 @@
+<h1>Restaurants</h1>
+<%= link_to "Add Your Restaurant For FREE!", new_restaurant_path%>
+<div id="restaurant_list">
+  <ul>
+    <% @restaurants.each do |r| %>
+      <li>
+        Name: <%= link_to r.name, restaurant_path(r) %>
+      </li>
+      <li>
+        Location: <%= "#{r.address}, #{r.city} #{r.state} #{r.zip_code}"%>
+      </li>
+      <li>
+        Description: <%= r.description%>
+      </li>
+      <li>
+        Cuisine/Category: <%= r.category %>
+      </li>
+      <br>
+    <%end%>
+  </ul>
+</div>
+
+<div>
+  <% if @page >= 1 %>
+    <a href="/?page=<%=(@page - 1) %>"><- Previous page</a>
+  <%end%>
+  <a href="/?page=<%=(@page + 1) %>">Next page -></a>
+</div>
